@@ -1,2 +1,4 @@
 # jetbrains
 /*.iml
+
+/vendor/
