@@ -1,0 +1,36 @@
+{
+    "name": "weatherlink/weatherlink_v2_api_sdk",
+    "description": "WeatherLink v2 API SDK for PHP",
+    "version": "0.0.1",
+    "type": "library",
+    "keywords": [
+        "WeatherLink",
+        "Davis Instruments"
+    ],
+    "homepage": "https://weatherlink.github.io/v2-api/php-sdk",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Jeremy Wall",
+            "email": "jeremyw@davisinstruments.com",
+            "homepage": "https://weatherlink.github.io",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/weatherlink/weatherlink-v2-api-sdk-php/issues",
+        "source": "https://github.com/weatherlink/weatherlink-v2-api-sdk-php",
+        "chat": "https://discord.gg/WCEdd2S4Ve"
+    },
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "weatherlink_v2_api_sdk\\": "src/weatherlink_v2_api_sdk"
+        }
+    }
+}
