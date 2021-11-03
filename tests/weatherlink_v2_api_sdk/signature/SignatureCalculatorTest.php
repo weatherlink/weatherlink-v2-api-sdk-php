@@ -13,7 +13,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateStationsSignatureWithoutStationIds($apiKey, $apiSecret, $apiRequestTimestamp, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateStationsSignature($apiKey, $apiSecret, $apiRequestTimestamp);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateStationsSignatureWithoutStationIdsDataProvider() {
@@ -30,7 +30,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateStationsSignatureWithStationIds($apiKey, $apiSecret, $apiRequestTimestamp, $stationIds, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateStationsSignature($apiKey, $apiSecret, $apiRequestTimestamp, $stationIds);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateStationsSignatureWithStationIdsDataProvider() {
@@ -47,7 +47,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateNodesSignatureWithoutNodeIds($apiKey, $apiSecret, $apiRequestTimestamp, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateNodesSignature($apiKey, $apiSecret, $apiRequestTimestamp);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateNodesSignatureWithoutNodeIdsDataProvider() {
@@ -64,7 +64,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateNodesSignatureWithNodeIds($apiKey, $apiSecret, $apiRequestTimestamp, $nodeIds, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateNodesSignature($apiKey, $apiSecret, $apiRequestTimestamp, $nodeIds);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateNodesSignatureWithNodeIdsDataProvider() {
@@ -81,7 +81,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateSensorsSignatureWithoutSensorIds($apiKey, $apiSecret, $apiRequestTimestamp, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateSensorsSignature($apiKey, $apiSecret, $apiRequestTimestamp);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateSensorsSignatureWithoutSensorIdsDataProvider() {
@@ -98,7 +98,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateSensorsSignatureWithSensorIds($apiKey, $apiSecret, $apiRequestTimestamp, $sensorIds, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateSensorsSignature($apiKey, $apiSecret, $apiRequestTimestamp, $sensorIds);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateSensorsSignatureWithSensorIdsDataProvider() {
@@ -115,7 +115,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateSensorActivitySignatureWithoutSensorIds($apiKey, $apiSecret, $apiRequestTimestamp, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateSensorActivitySignature($apiKey, $apiSecret, $apiRequestTimestamp);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateSensorActivitySignatureWithoutSensorIdsDataProvider() {
@@ -132,7 +132,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateSensorActivitySignatureWithSensorIds($apiKey, $apiSecret, $apiRequestTimestamp, $sensorIds, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateSensorActivitySignature($apiKey, $apiSecret, $apiRequestTimestamp, $sensorIds);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateSensorActivitySignatureWithSensorIdsDataProvider() {
@@ -149,7 +149,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateSensorCatalogSignature($apiKey, $apiSecret, $apiRequestTimestamp, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateSensorCatalogSignature($apiKey, $apiSecret, $apiRequestTimestamp);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateSensorCatalogSignatureDataProvider() {
@@ -166,7 +166,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testCalculateCurrentSignature($apiKey, $apiSecret, $apiRequestTimestamp, $stationId, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateCurrentSignature($apiKey, $apiSecret, $apiRequestTimestamp, $stationId);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateCurrentSignatureDataProvider() {
@@ -183,7 +183,7 @@ class SignatureCalculatorTest extends TestCase {
     public function testHistoricCurrentSignature($apiKey, $apiSecret, $apiRequestTimestamp, $stationId, $startTimestamp, $endTimestamp, $expectedApiSignature) {
         $signatureCalculator = new SignatureCalculator();
         $apiSignature = $signatureCalculator->calculateHistoricSignature($apiKey, $apiSecret, $apiRequestTimestamp, $stationId, $startTimestamp, $endTimestamp);
-        $this->assertEquals($expectedApiSignature, $apiSignature);
+        $this->assertEquals($expectedApiSignature, $apiSignature, "API signature does not match expected value");
     }
 
     public function calculateHistoricSignatureDataProvider() {
