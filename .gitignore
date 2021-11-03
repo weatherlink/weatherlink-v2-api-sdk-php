@@ -2,4 +2,7 @@
 /*.iml
 
 /vendor/
+
 /composer.lock
+
+/*.phar
