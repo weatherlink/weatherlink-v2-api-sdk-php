@@ -15,7 +15,7 @@ class SignatureCalculator {
         if (sizeof($stationIds) > 0) {
             $parametersToHash["station-ids"] = $implode(",", $stationIds);
         }
-        return calculateSignature($apiSecret, $parametersToHash);
+        return $this->calculateSignature($apiSecret, $parametersToHash);
     }
 
     public function calculateNodesSignature($apiKey, $apiSecret, $apiRequestTimestamp, $nodeIds = array()) {
@@ -26,7 +26,7 @@ class SignatureCalculator {
         if (sizeof($stationIds) > 0) {
             $parametersToHash["node-ids"] = $implode(",", $nodeIds);
         }
-        return calculateSignature($apiSecret, $parametersToHash);
+        return $this->calculateSignature($apiSecret, $parametersToHash);
     }
 
     public function calculateSensorsSignature($apiKey, $apiSecret, $apiRequestTimestamp, $sensorIds = array()) {
@@ -37,7 +37,7 @@ class SignatureCalculator {
         if (sizeof($stationIds) > 0) {
             $parametersToHash["sensor-ids"] = $implode(",", $sensorIds);
         }
-        return calculateSignature($apiSecret, $parametersToHash);
+        return $this->calculateSignature($apiSecret, $parametersToHash);
     }
 
     public function calculateSensorActivitySignature($apiKey, $apiSecret, $apiRequestTimestamp, $sensorIds = array()) {
@@ -48,7 +48,7 @@ class SignatureCalculator {
         if (sizeof($stationIds) > 0) {
             $parametersToHash["sensor-ids"] = $implode(",", $sensorIds);
         }
-        return calculateSignature($apiSecret, $parametersToHash);
+        return $this->calculateSignature($apiSecret, $parametersToHash);
     }
 
     public function calculateSensorCatalogSignature($apiKey, $apiSecret, $apiRequestTimestamp) {
@@ -56,7 +56,7 @@ class SignatureCalculator {
             "api-key" => $apiKey,
             "t" => $apiRequestTimestamp
         );
-        return calculateSignature($apiSecret, $parametersToHash);
+        return $this->calculateSignature($apiSecret, $parametersToHash);
     }
 
     public function calculateCurrentSignature($apiKey, $apiSecret, $apiRequestTimestamp, $stationId) {
@@ -65,7 +65,7 @@ class SignatureCalculator {
             "t" => $apiRequestTimestamp,
             "station-id" => $stationId
         );
-        return calculateSignature($apiSecret, $parametersToHash);
+        return $this->calculateSignature($apiSecret, $parametersToHash);
     }
 
     public function calculateHistoricSignature($apiKey, $apiSecret, $apiRequestTimestamp, $stationId, $startTimestamp, $endTimestamp) {
@@ -76,7 +76,7 @@ class SignatureCalculator {
             "start-timestamp" => $startTimestamp,
             "end-timestamp" => $endTimestamp
         );
-        return calculateSignature($apiSecret, $parametersToHash);
+        return $this->calculateSignature($apiSecret, $parametersToHash);
     }
 
     private function calculateSignature($apiSecret, $parametersToHash) {
