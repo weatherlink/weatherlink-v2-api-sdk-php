@@ -13,7 +13,7 @@ class SignatureCalculator {
             "t" => $apiRequestTimestamp
         );
         if (sizeof($stationIds) > 0) {
-            $parametersToHash["station-ids"] = $implode(",", $stationIds);
+            $parametersToHash["station-ids"] = implode(",", $stationIds);
         }
         return $this->calculateSignature($apiSecret, $parametersToHash);
     }
@@ -23,8 +23,8 @@ class SignatureCalculator {
             "api-key" => $apiKey,
             "t" => $apiRequestTimestamp
         );
-        if (sizeof($stationIds) > 0) {
-            $parametersToHash["node-ids"] = $implode(",", $nodeIds);
+        if (sizeof($nodeIds) > 0) {
+            $parametersToHash["node-ids"] = implode(",", $nodeIds);
         }
         return $this->calculateSignature($apiSecret, $parametersToHash);
     }
@@ -34,8 +34,8 @@ class SignatureCalculator {
             "api-key" => $apiKey,
             "t" => $apiRequestTimestamp
         );
-        if (sizeof($stationIds) > 0) {
-            $parametersToHash["sensor-ids"] = $implode(",", $sensorIds);
+        if (sizeof($sensorIds) > 0) {
+            $parametersToHash["sensor-ids"] = implode(",", $sensorIds);
         }
         return $this->calculateSignature($apiSecret, $parametersToHash);
     }
@@ -45,8 +45,8 @@ class SignatureCalculator {
             "api-key" => $apiKey,
             "t" => $apiRequestTimestamp
         );
-        if (sizeof($stationIds) > 0) {
-            $parametersToHash["sensor-ids"] = $implode(",", $sensorIds);
+        if (sizeof($sensorIds) > 0) {
+            $parametersToHash["sensor-ids"] = implode(",", $sensorIds);
         }
         return $this->calculateSignature($apiSecret, $parametersToHash);
     }
