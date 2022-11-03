@@ -20,7 +20,7 @@
     "support": {
         "issues": "https://github.com/weatherlink/weatherlink-v2-api-sdk-php/issues",
         "source": "https://github.com/weatherlink/weatherlink-v2-api-sdk-php",
-        "chat": "https://weatherlink.github.io/v2-api/discord"
+        "chat": "https://weatherlink.github.io/discord"
     },
     "require": {
         "php": ">=5.3"
