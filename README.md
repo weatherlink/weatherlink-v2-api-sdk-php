@@ -10,7 +10,7 @@ This project is just getting started and this is the initial release focused on 
 
 ## Communication
 
-* [WeatherLink Developer Discord](https://weatherlink.github.io/discord), please direct questions to the PHP SDK channel under the WeatherLink v2 API category
+* [WeatherLink Developer Discord](https://weatherlink.github.io/discord), please direct questions to the chat channel under the WeatherLink v2 API category
 * [GitHub Issues](https://github.com/weatherlink/weatherlink-v2-api-sdk-php/issues) for bug reports
 
 
