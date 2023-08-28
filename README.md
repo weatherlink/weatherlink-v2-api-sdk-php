@@ -1,3 +1,5 @@
+# Note: This SDK is retired, the WeatherLink v2 API no longer requires the use of an API Signature parameter thus making the single function this SDK provided no longer necessary.
+
 # WeatherLink v2 API SDK for PHP
 
 [![Packagist](https://img.shields.io/packagist/v/weatherlink/weatherlink_v2_api_sdk?color=blue&style=flat-square)](https://packagist.org/packages/weatherlink/weatherlink_v2_api_sdk)
